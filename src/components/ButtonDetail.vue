@@ -4,9 +4,9 @@
     style="display:block"
     >
   <div class="modal-dialog">
+    
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
         <button type="button" class="btn-close" @click="OpenCloseButton()" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -47,3 +47,4 @@ export default{
     }
 }
 </script>
+
