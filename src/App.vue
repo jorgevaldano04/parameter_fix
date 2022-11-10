@@ -1,6 +1,6 @@
 <template>
   <div class="container">
- <h2 class="mb-4" style="color:#008080;">Daftar Parameter</h2>
+ <h3 class="mb-4" style="color:#008080;">Daftar Parameter</h3>
  <ParameterTable />
 </div>
   
