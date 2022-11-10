@@ -6,20 +6,26 @@
   <div class="modal-dialog">
     
     <div class="modal-content">
+    
+             
       <div class="modal-header">
+       <p>Module Management / Performance Management / Configuring / Parameter Master</p>
         <button type="button" class="btn-close" @click="OpenCloseButton()" aria-label="Close"></button>
       </div>
       <div class="modal-body">
      <slot></slot>
       </div>
       <div class="modal-footer">
-        <button type="button" @click="OpenCloseButton()" :class="'btn btn-'+variant" >Close</button>
+        <button type="button" style="background-color:#E75408" @click="OpenCloseButton()" :class="'btn btn-'+variant" >Kembali</button>
+        <button type="button" style="background-color:#E75408" @click="OpenCloseButton()" :class="'btn btn-'+variant" >Ubah</button>
+
+
         
       </div>
     </div>
   </div>
 </div>
-<button type="button" style="background-color:#ff6900" @click="OpenCloseButton()" :class="'btn btn-'+variant" >Detail</button>
+<button type="button" style="background-color:#E75408"  @click="OpenCloseButton()" :class="'btn btn-'+variant" >Detail</button>
 </template>
 
 <script>
@@ -49,6 +55,7 @@ export default{
 </script>
 
 <style>
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -71,7 +78,7 @@ export default{
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 100%;
+  width: 150%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;

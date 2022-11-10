@@ -14,10 +14,11 @@
         <tr v-for="(content, index) in contents" :key="content.id">
           <td style="width:1%; text-align: center;">{{ index + 1}}</td>
           <td>{{content.name}}</td>
-          <td>{{content.valueParameter}}</td>
+          <td>{{content.id}}</td>
           <td><ButtonDetail :visible="false" variant="success">Module Name <br>{{ content.moduleName }}<br>
           Parameter Name <br>{{content.parameterName}}
-          <br>Deskripsi <br>{{content.description}}</ButtonDetail></td>
+          <br>Deskripsi <br>{{content.description}}<br><label for="fname">Start Date</label><br>
+  <input id="fname" placeholder={{content.username}} name="fname"></ButtonDetail></td>
         </tr>
       </tbody>
     </table>
@@ -54,7 +55,7 @@
         setTimeout(function(){
         $('#example').DataTable(
             {
-              dom: '<"top"lf>rt<"bottom"pi><"clear">',
+                dom: '<"top"lf>rt<"bottom"pi><"clear">',
                 filter:false,
                 pagingType: 'full_numbers',
                 pageLength: 5,
@@ -83,6 +84,10 @@
   </script>
 
   <style>
+.table.dataTable{
+  width: 100%;
+ 
+}
 .dataTables_wrapper .dataTables_length{
 float: right;
 }
@@ -97,7 +102,7 @@ margin-right: 200px;
   float:right;
 }
 .table-primary {
-  background-color: #cdd0d5;
+  background-color: #BDC7D2;
 }
 </style>
 
