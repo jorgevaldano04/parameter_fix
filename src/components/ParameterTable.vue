@@ -1,5 +1,4 @@
 <template>
-    
      <table class="table cell-border stripe" id="example">
       <thead class="thead-light">
         <tr class="table" style="background-color: #cdd0d5;">
@@ -55,20 +54,25 @@
         setTimeout(function(){
         $('#example').DataTable(
             {
+                processing: true,
                 dom: '<"top"lf>rt<"bottom"pi><"clear">',
-                filter:false,
+                "sInfoFiltered": "",
                 pagingType: 'full_numbers',
                 pageLength: 5,
+                "autoWidth": true,
+                "lengthMenu": [[5, 10, 15], [5, 10, 15]],
                 "language":{
-                "info":           "Menampilkan _START_ - _END_ dari _TOTAL_ data",
-                "lengthMenu":     "Menampilkan _MENU_ data per halaman",
-                "search":         "Fillter Nama Parameter",
-                "paginate": {
-                    "first":      "Pertama",
-                    "last":       "Terakhir",
-                    "next":       "Selanjutnya",
-                    "previous":   "Sebelumnya"
-                },
+            "sInfoFiltered": "",
+            "sLengthMenu": "Menampilkan _MENU_ data per halaman",
+            "sInfo": "Menampilkan _START_ - _END_ dari _TOTAL_ data",
+            "search":         "Fillter Nama Parameter",
+            "sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>',
+            "oPaginate": {
+                "sFirst": "Pertama",
+                "sPrevious": "Sebelumnya",
+                "sNext": "Selanjutnya",
+                "sLast": "Terakhir"
+            }
               }
             }
             
@@ -92,11 +96,11 @@
 float: right;
 }
 
-.dataTables_filter{
+/* .dataTables_filter{
 margin-top: 50px;
-margin-right: 200px;
+margin-left: 500px;
   
-}
+} */
 
 .dataTables_wrapper .dataTables_info{
   float:right;
