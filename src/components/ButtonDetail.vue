@@ -18,9 +18,6 @@
       <div class="modal-footer">
         <button type="button" style="background-color:#E75408" @click="OpenCloseButton()" :class="'btn btn-'+variant" >Kembali</button>
         <button type="button" style="background-color:#E75408" @click="OpenCloseButton()" :class="'btn btn-'+variant" >Ubah</button>
-
-
-        
       </div>
     </div>
   </div>

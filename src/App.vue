@@ -18,13 +18,13 @@ export default {
 
 <style>
 .container {
-  max-width: 70rem;
-  margin: 2rem auto;
+  max-width: 100rem;
+  margin: 10rem auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 2rem;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 12px;
 }
 

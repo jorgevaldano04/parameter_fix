@@ -16,8 +16,8 @@
           <td>{{content.id}}</td>
           <td><ButtonDetail :visible="false" variant="success">Module Name <br>{{ content.moduleName }}<br>
           Parameter Name <br>{{content.parameterName}}
-          <br>Deskripsi <br>{{content.description}}<br><label for="fname">Start Date</label><br>
-  <input id="fname" placeholder={{content.username}} name="fname"></ButtonDetail></td>
+          <br>Deskripsi <br>{{content.description}}<br>
+</ButtonDetail></td>
         </tr>
       </tbody>
     </table>
@@ -34,7 +34,7 @@
   import "datatables.net-buttons/js/dataTables.buttons.js"
   import "datatables.net-buttons/js/buttons.colVis.js"
   import $ from 'jquery'; 
-  import axios from 'axios'; //for api calling
+  import axios from 'axios'; //Memanggil API
   import ButtonDetail from '@/components/ButtonDetail.vue'
 
   export default {
@@ -46,7 +46,7 @@
     },
    
     mounted(){
-      //Web api calling for dynamic data and you can also use into your demo project
+      //Memanggil API
       axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then(response=>{
@@ -54,6 +54,7 @@
         setTimeout(function(){
         $('#example').DataTable(
             {
+               
                 processing: true,
                 dom: '<"top"lf>rt<"bottom"pi><"clear">',
                 "sInfoFiltered": "",
@@ -65,7 +66,9 @@
             "sInfoFiltered": "",
             "sLengthMenu": "Menampilkan _MENU_ data per halaman",
             "sInfo": "Menampilkan _START_ - _END_ dari _TOTAL_ data",
-            "search":         "Fillter Nama Parameter",
+            "searchPlaceholder": "Fillter Nama Parameter",
+            "sZeroRecords": "Tidak ada data yang ditampilkan",
+            "search":         "",
             "sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>',
             "oPaginate": {
                 "sFirst": "Pertama",
@@ -96,11 +99,11 @@
 float: right;
 }
 
-/* .dataTables_filter{
+.dataTables_filter{
 margin-top: 50px;
-margin-left: 500px;
+margin-right: 400px;
   
-} */
+}
 
 .dataTables_wrapper .dataTables_info{
   float:right;
@@ -108,6 +111,16 @@ margin-left: 500px;
 .table-primary {
   background-color: #BDC7D2;
 }
+
+.dataTables_filter input {
+  width: 800px;
+  height: 40px;  
+  padding: 25px;
+  display: flex;
+  margin: 5px
+
+}
 </style>
+
 
   
